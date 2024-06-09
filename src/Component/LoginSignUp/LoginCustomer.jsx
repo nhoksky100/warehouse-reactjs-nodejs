@@ -63,7 +63,7 @@ class LoginCustomer extends Component {
     }
     getData = () => {
         getdataAccount().then((res) => {
-            // console.log(res, 'res');
+            console.log(res, 'res');
             if (this._isMounted) {
 
                 this.setState({ dataAccount: res })
@@ -130,7 +130,7 @@ class LoginCustomer extends Component {
     handleClickLogin = () => {
         const { dataAccount, username, password } = this.state;
 
-        // console.log(stringtoslug(username),'username');
+        console.log(username,'username');
         let flagLogin = false;
         if (this.state.isDisabled) {
             return; // Nếu nút đã bị vô hiệu hóa, không làm gì cả
