@@ -129,8 +129,9 @@ class LoginCustomer extends Component {
 
     handleClickLogin = () => {
         const { dataAccount, username, password } = this.state;
-
+    
         console.log(username,'username');
+        console.log(dataAccount,'dataAccount');
         let flagLogin = false;
         if (this.state.isDisabled) {
             return; // Nếu nút đã bị vô hiệu hóa, không làm gì cả
