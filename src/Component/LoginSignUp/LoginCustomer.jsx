@@ -133,9 +133,11 @@ class LoginCustomer extends Component {
         console.log(username,'username');
         console.log(dataAccount,'dataAccount');
         let flagLogin = false;
-        if (this.state.isDisabled) {
-            return; // Nếu nút đã bị vô hiệu hóa, không làm gì cả
+           if (!dataAccount || dataAccount.length === 0) {
+            console.error('No data account found.');
+            return;
         }
+
 
         this.setState({ isDisabled: true }); // Vô hiệu hóa nút
 
