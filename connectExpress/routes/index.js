@@ -1,6 +1,6 @@
 var express = require('express');
 var body = require('body-parser');
-var bcrypt = require('bcryptjs');
+var bcrypt = require('bcrypt');
 const path = require('path');
 var fs = require('fs/promises');
 var multer = require('multer');
