@@ -9,28 +9,28 @@ var jwt = require('jsonwebtoken');
 var router = express.Router();
 
 // Định nghĩa các đường dẫn đến các tệp JSON
-const warehouseJson = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/warehouse.json');
-const createWarehouseJson = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/createWarehouse.json');
-const intoWarehouseJson = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/intoWarehouse.json');
-const supplierJson = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/supplier.json');
-const documentJson = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/document.json');
-const requestListJson = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/requestList.json');
-const requestTransferExport = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/requestTransferExport.json');
-const memberJson = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/member.json');
-const itemsJson = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/items.json');
-const accountJson = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/account.json');
-const orderApproverJson = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/orderApprover.json');
-const orderSave = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/orderSave.json');
-const orderSaveTransferExport = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/orderSaveTransferExport.json');
-const transferExportApprover = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/transferExportApprover.json');
-const notificationJson = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/notification.json');
-const requestHistory = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/requestHistory.json');
-const requestHistoryTransfer = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/requestHistoryTransfer.json');
-const dataCityJson = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/data.json');
-const accCustomerJson = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/Account_Customer.json');
-const fileImageJson = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/ImageProfile.json');
-const listSendFiendJSON = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/ListSendFriend.json');
-const uploadFileJson = path.join(__dirname, '../../src/UrlRouter/ConnectJSON/Upload_File.json');
+const warehouseJson = path.join(__dirname, './ConnectJSON/warehouse.json');
+const createWarehouseJson = path.join(__dirname, './ConnectJSON/createWarehouse.json');
+const intoWarehouseJson = path.join(__dirname, './ConnectJSON/intoWarehouse.json');
+const supplierJson = path.join(__dirname, './ConnectJSON/supplier.json');
+const documentJson = path.join(__dirname, './ConnectJSON/document.json');
+const requestListJson = path.join(__dirname, './ConnectJSON/requestList.json');
+const requestTransferExport = path.join(__dirname, './ConnectJSON/requestTransferExport.json');
+const memberJson = path.join(__dirname, './ConnectJSON/member.json');
+const itemsJson = path.join(__dirname, './ConnectJSON/items.json');
+const accountJson = path.join(__dirname, './ConnectJSON/account.json');
+const orderApproverJson = path.join(__dirname, './ConnectJSON/orderApprover.json');
+const orderSave = path.join(__dirname, './ConnectJSON/orderSave.json');
+const orderSaveTransferExport = path.join(__dirname, './ConnectJSON/orderSaveTransferExport.json');
+const transferExportApprover = path.join(__dirname, './ConnectJSON/transferExportApprover.json');
+const notificationJson = path.join(__dirname, './ConnectJSON/notification.json');
+const requestHistory = path.join(__dirname, './ConnectJSON/requestHistory.json');
+const requestHistoryTransfer = path.join(__dirname, './ConnectJSON/requestHistoryTransfer.json');
+const dataCityJson = path.join(__dirname, './ConnectJSON/data.json');
+const accCustomerJson = path.join(__dirname, './ConnectJSON/Account_Customer.json');
+const fileImageJson = path.join(__dirname, './ConnectJSON/ImageProfile.json');
+const listSendFiendJSON = path.join(__dirname, './ConnectJSON/ListSendFriend.json');
+const uploadFileJson = path.join(__dirname, './ConnectJSON/Upload_File.json');
 
 const readJsonFile = async (filePath) => {
     try {
