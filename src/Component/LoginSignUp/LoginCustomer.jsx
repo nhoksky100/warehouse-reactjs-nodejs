@@ -18,7 +18,7 @@ class LoginCustomer extends Component {
         super(props);
 
         this.state = {
-            dataAccount: null,
+            dataAccount: [],
             username: '',
             password: '',
             isDisabled: false,
@@ -114,7 +114,7 @@ class LoginCustomer extends Component {
     // decodeShow  =()=>  {
     //     const encode = this.getCookie('loginObject') || []
     //     axios.post('/decodeData', { encode: encode.codeToken }).then((res) => {
-           
+
     //         if (res.data.isDeCode) {
     //             // tokenObj: res.data.decodeData,
     //           
@@ -126,7 +126,7 @@ class LoginCustomer extends Component {
     // }
 
 
-    
+
     handleClickLogin = () => {
         const { dataAccount, username, password } = this.state;
 
@@ -139,7 +139,7 @@ class LoginCustomer extends Component {
         this.setState({ isDisabled: true }); // Vô hiệu hóa nút
 
         // Tạo một mảng chứa tất cả các promise
-        const promises = dataAccount.map((value) => {
+        const promises = dataAccount.length > 0 && dataAccount.map((value) => {
             if ((username === value.accountUserName || username === value.accountEmail) && value.accountStatus === 'Đang sử dụng') {
                 let dataLogin = value;
                 // Trả về một promise từ mỗi yêu cầu axios.post
@@ -156,7 +156,7 @@ class LoginCustomer extends Component {
                             // Mã hóa dữ liệu trước khi lưu vào cookie
                             // const encodedDataLogin = encodeData(dataLogin);
                             setCookie('loginObject', dataLogin, 1140)
-                           
+
                             toast(<div className="advertise"><i className="fa fa-minus-circle" aria-hidden="true" />
                                 <i>Đăng nhập thành công!</i></div>);
                             // xử lý truyền router khi đang nhập thành công
